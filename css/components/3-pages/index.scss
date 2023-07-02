@@ -1,0 +1,58 @@
+.hero {
+  background: $primary;
+  padding: 50px 0;
+  height: 66.6vh;
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 70px;
+    &-row {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 30px;
+      width: 100%;
+      .input {
+        &:nth-child(1) {
+          max-width: 320px;
+        }
+        &:nth-child(2) {
+          max-width: 100px;
+          input {
+            text-align: center;
+          }
+        }
+        &:nth-child(3) {
+          max-width: 120px;
+        }
+        &:nth-child(4) {
+          max-width: 250px;
+        }
+        &:nth-child(5) {
+        }
+      }
+    }
+  }
+  h1 {
+    font-weight: 400;
+    text-align: center;
+  }
+}
+
+.grid {
+  padding: 40px 0;
+  &__inner {
+    &-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 15px;
+    }
+  }
+  &Item {
+    width: calc(33.3% - 10px);
+    max-width: 394px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+}

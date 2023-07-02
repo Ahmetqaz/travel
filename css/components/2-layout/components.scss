@@ -1,0 +1,126 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  min-height: 100%;
+}
+.autoContainer {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 60px;
+}
+.input {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  font-size: 40px;
+  input,
+  textarea {
+    width: 100%;
+    background-color: transparent;
+    resize: none;
+    transition: 0.3s ease-out;
+    font-family: $font-secondary;
+
+    //font
+    color: $black;
+    font-style: normal;
+    font-weight: 400;
+    font-size: inherit;
+    line-height: 1;
+    @include ellipsis;
+    letter-spacing: -0.4px;
+    &::placeholder {
+      color: $secondary;
+      transition: 0.3s ease-out;
+    }
+  }
+  label {
+    position: relative;
+    font-size: 14px;
+    color: $black;
+    font-weight: 300;
+    span {
+      font-weight: 100;
+    }
+    &::before {
+      content: "";
+      width: 100%;
+      height: 2px;
+      background: $black;
+      position: absolute;
+      left: 0;
+      top: -5px;
+    }
+  }
+  &._default{
+    input{
+      color: $secondary;
+    }
+  }
+}
+.button {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8em 1.5em;
+  border: 1px solid transparent;
+
+  color: $black;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1;
+  transition: all 0.3s ease;
+  font-family: $font-primary;
+  &--primary {
+    background: $black;
+    color: $white;
+    border-radius: 100px;
+    min-width: 300px;
+    &:hover {
+      color: $black;
+      background: $white;
+      border-color: $black;
+    }
+  }
+  &--secondary {
+    border-radius: 100px;
+    width: 100%;
+    border-color: $black;
+    background-color: $white;
+    &:hover {
+      color: $white;
+      background: $black;
+    }
+  }
+  &:active {
+    opacity: 0.7;
+  }
+  &:disabled {
+    cursor: default;
+    opacity: 0.5 !important;
+  }
+}
+.ratioImage {
+  position: relative;
+  padding-bottom: 64%;
+  width: 100%;
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  &--contain {
+    img {
+      object-fit: contain;
+    }
+  }
+}
+.noBreak {
+  white-space: nowrap;
+}
