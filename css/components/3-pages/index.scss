@@ -47,17 +47,20 @@
     gap: 45px;
     &-row {
       display: flex;
-      justify-content: space-between;
+      justify-content: flex-start;
       flex-wrap: wrap;
-      gap: 15px;
+      gap: 48px;
     }
   }
   &Item {
-    width: calc(33.3% - 10px);
+    width: calc(33.3% - 32px);
     max-width: 394px;
     display: flex;
     flex-direction: column;
     gap: 14px;
+    p {
+      flex: 1;
+    }
   }
 }
 .tabs {
@@ -137,13 +140,39 @@
     gap: 40px;
     font-size: 25px;
   }
+  .grid {
+    &__inner {
+      &-row {
+        gap: 30px 30px;
+      }
+    }
+    &Item {
+      width: calc(33.3% - 20px);
+    }
+  }
+}
+@mixin index-1160 {
+  .grid {
+    &__inner {
+      &-row {
+        gap: 30px 20px;
+      }
+    }
+    &Item {
+      width: calc(33.3% - 15px);
+    }
+  }
 }
 @mixin index-1025 {
   .grid {
     &__inner {
+      &-row {
+        gap: 30px 12px;
+      }
     }
     &Item {
       gap: 10px;
+      width: calc(33.3% - 10px);
     }
   }
 }
