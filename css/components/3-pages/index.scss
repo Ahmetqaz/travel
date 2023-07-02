@@ -1,12 +1,13 @@
 .hero {
   background: $primary;
   padding: 50px 0;
-  height: 66.6vh;
   &__inner {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 70px;
+    gap: 30px;
+    justify-content: space-between;
+    min-height: calc(66.6vh - 100px);
     &-row {
       display: flex;
       gap: 16px;
@@ -38,7 +39,6 @@
     text-align: center;
   }
 }
-
 .grid {
   padding: 40px 0;
   &__inner {
@@ -71,6 +71,7 @@
     color: $gray;
     cursor: pointer;
     transition: 0.3s ease-in-out;
+    padding-bottom: 10px;
     &:after {
       content: "";
       width: 0;
@@ -78,7 +79,7 @@
       background: $gray;
       position: absolute;
       left: 0;
-      bottom: -7px;
+      bottom: 0;
       opacity: 0;
       transition: 0.3s ease-in-out;
     }
@@ -96,8 +97,153 @@
         opacity: 1;
       }
       &:hover {
-        opacity: .7;
+        opacity: 0.7;
       }
     }
+  }
+}
+
+@mixin index-1280 {
+  .hero {
+    &__inner {
+      &-row {
+        flex-wrap: wrap;
+        .input__wrapper {
+          &:nth-child(1) {
+            max-width: unset;
+            width: calc(50% - 15px);
+          }
+          &:nth-child(2) {
+            max-width: unset;
+            width: calc(25% - 15px);
+          }
+          &:nth-child(3) {
+            max-width: unset;
+            width: calc(25% - 15px);
+          }
+          &:nth-child(4) {
+            max-width: unset;
+            width: calc(50% - 15px);
+          }
+          &:nth-child(5) {
+            width: calc(50% - 15px);
+          }
+        }
+      }
+    }
+  }
+  .tabs {
+    gap: 40px;
+    font-size: 25px;
+  }
+}
+@mixin index-1025 {
+  .grid {
+    &__inner {
+    }
+    &Item {
+      gap: 10px;
+    }
+  }
+}
+@mixin index-840 {
+  .grid {
+    padding: 30px 0;
+    &__inner {
+      gap: 40px;
+    }
+    &Item {
+      gap: 10px;
+    }
+  }
+}
+@mixin index-768 {
+  .hero {
+    padding-bottom: 40px;
+  }
+  .grid {
+    padding: 30px 0;
+    &__inner {
+      &-row {
+        flex-wrap: wrap;
+        gap: 30px 20px;
+      }
+    }
+    &Item {
+      max-width: unset;
+      gap: 10px;
+      width: calc(50% - 10px);
+    }
+  }
+  .tabs {
+    gap: 30px;
+    font-size: 22px;
+    &__button {
+      padding-bottom: 7px;
+    }
+  }
+}
+@mixin index-580 {
+  .grid {
+    &__inner {
+      gap: 25px;
+    }
+  }
+  .tabs {
+    gap: 25px;
+    font-size: 18px;
+    &__button {
+      padding-bottom: 5px;
+    }
+  }
+}
+@mixin index-480 {
+  .hero {
+    &__inner {
+      &-row {
+        margin-bottom: 10px;
+        flex-wrap: wrap;
+        gap: 20px 10px;
+        .input__wrapper {
+          &:nth-child(1) {
+            max-width: unset;
+            width: calc(50% - 7px);
+          }
+          &:nth-child(2) {
+            max-width: unset;
+            width: calc(25% - 7px);
+          }
+          &:nth-child(3) {
+            max-width: unset;
+            width: calc(25% - 7px);
+          }
+          &:nth-child(4) {
+            max-width: unset;
+            width: 100%;
+          }
+          &:nth-child(5) {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+  .grid {
+    &__inner {
+      &-row {
+        gap: 25px;
+        justify-content: center;
+      }
+    }
+    &Item {
+      gap: 10px;
+      width: 100%;
+      max-width: 400px;
+    }
+  }
+  .tabs {
+    gap: 25px;
+    font-size: 16px;
+    flex-wrap: wrap;
   }
 }

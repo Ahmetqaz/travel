@@ -217,3 +217,13 @@
     }
   }
 }
+
+@mixin header-580 {
+  .nav {
+    &__inner {
+      &-link {
+        font-size: 14px;
+      }
+    }
+  }
+}

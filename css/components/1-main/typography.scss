@@ -37,3 +37,45 @@ p {
   font-size: 14px;
   line-height: 1.8em;
 }
+
+@mixin typography-1350 {
+  h1,h2 {
+    font-size: 90px;
+  }
+}
+@mixin typography-1280{
+  h1,h2 {
+    font-size: 80px;
+  }
+}
+@mixin typography-1160{
+  h1,h2 {
+    font-size: 70px;
+  }
+}
+@mixin typography-1025{
+  h1,h2 {
+    font-size: 65px;
+  }
+  h4 {
+    font-size: 18px;
+  }
+}
+@mixin typography-840{
+  h1,h2 {
+    font-size: 60px;
+  }
+}
+@mixin typography-580{
+  h1,h2 {
+    font-size: 50px;
+  }
+  h4{
+    font-size: 16px;
+  }
+}
+@mixin typography-480{
+  h1,h2 {
+    font-size: 40px;
+  }
+}

@@ -126,3 +126,43 @@
 .noBreak {
   white-space: nowrap;
 }
+
+@mixin componetns-1280 {
+  .input {
+    font-size: 35px;
+  }
+}
+
+@mixin componetns-1025 {
+  .button {
+    font-size: 16px;
+    &--primary {
+      min-width: 270px;
+    }
+  }
+}
+
+@mixin componetns-840 {
+  .input {
+    font-size: 30px;
+  }
+}
+@mixin componetns-580 {
+  .input {
+    font-size: 25px;
+  }
+  .button {
+    font-size: 14px;
+    &--primary {
+      min-width: 250px;
+    }
+  }
+}
+@mixin componetns-480 {
+  .input {
+    font-size: 22px;
+  }
+  .badge {
+    font-size: 12px;
+  }
+}
