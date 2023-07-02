@@ -350,7 +350,7 @@ svg {
   -webkit-transition: 0.3s ease-out;
   transition: 0.3s ease-out;
 }
-.input--underline input {
+.input--underline input, .input--underline textarea {
   border-bottom: 2px solid #000;
 }
 .input._default input {
@@ -650,6 +650,8 @@ svg {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   gap: 15px;
 }
 .gridItem {

@@ -37,7 +37,7 @@
     }
   }
   &--underline {
-    input {
+    input,textarea {
       border-bottom: 2px solid $black;
     }
   }
@@ -126,13 +126,11 @@
 .noBreak {
   white-space: nowrap;
 }
-
 @mixin componetns-1280 {
   .input {
     font-size: 35px;
   }
 }
-
 @mixin componetns-1025 {
   .button {
     font-size: 16px;
@@ -141,7 +139,6 @@
     }
   }
 }
-
 @mixin componetns-840 {
   .input {
     font-size: 30px;
